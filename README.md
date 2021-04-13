@@ -18,7 +18,3 @@ La aplicación implementa lo siguiente:
 - Reducer
 
 Recuerden instalar los modulos de node con `npm install`.
-
-Si quieren probar la aplicación completa en producción les dejo el siguiente link: 
-
-[HeroesApp](https://vigorous-turing-e161f8.netlify.app/login)
