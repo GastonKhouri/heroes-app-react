@@ -18,3 +18,5 @@ La aplicación implementa lo siguiente:
 - Reducer
 
 Recuerden instalar los modulos de node con `npm install`.
+
+[HeroesApp](https://gastonkhouri.github.io/login);
