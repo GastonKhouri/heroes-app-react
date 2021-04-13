@@ -19,4 +19,6 @@ La aplicación implementa lo siguiente:
 
 Recuerden instalar los modulos de node con `npm install`.
 
+Si quieren probar la aplicación completa en producción les dejo el siguiente link: 
+
 [HeroesApp](https://gastonkhouri.github.io/login);
