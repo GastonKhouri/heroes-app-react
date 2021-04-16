@@ -70,15 +70,17 @@ export const SearchScreen = ({ history }) => {
                             There is no a hero with { q }
                         </div>
                     }
-
-                    {
-                        heroesFiltered.map(hero => (
-                            <HeroCard 
-                                key={ hero.id }
-                                { ...hero }
-                            />
-                        ))
-                    }
+                    
+                    <div className="animate__animated animate__fadeIn">
+                        {
+                            heroesFiltered.map(hero => (
+                                <HeroCard 
+                                    key={ hero.id }
+                                    { ...hero }
+                                />
+                            ))
+                        }
+                    </div>
 
                 </div>
             </div>
