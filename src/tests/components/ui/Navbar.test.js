@@ -1,8 +1,8 @@
+import { mount } from 'enzyme';
 import React from 'react';
-import { mount } from "enzyme";
-import { Navbar } from '../../../components/ui/Navbar';
+import { MemoryRouter, Router } from 'react-router-dom';
 import { AuthContext } from '../../../auth/AuthContext';
-import { MemoryRouter, Router } from 'react-router';
+import { Navbar } from '../../../components/ui/NavBar';
 import { types } from '../../../types/types';
 
 describe('Pruebas en <Navbar />', () => {
@@ -12,49 +12,48 @@ describe('Pruebas en <Navbar />', () => {
         replace: jest.fn(),
         location: {},
         listen: jest.fn(),
-        createHref: jest.fn()
+        createHref: jest.fn(),
     }
-   
+
     const contextValue = {
-        dispatch: jest.fn(),
-        user: {
-            logged: true,
-            name: 'Gastón'
-        }
+        user: { logged: true, name: 'Gaston' },
+        dispatch: jest.fn()
     }
 
     const wrapper = mount(
-        <AuthContext.Provider value={ contextValue }>
+        <AuthContext.Provider value={ contextValue } >
             <MemoryRouter>
                 <Router history={ historyMock }>
                     <Navbar />
                 </Router>
             </MemoryRouter>
         </AuthContext.Provider>
-    );
+    )
 
-    afterEach(() => {
+    beforeEach(() => {
         jest.clearAllMocks();
-    });
+    })
+    
+    test('debe de mostrarse correctamente', () => {
 
-    test('Debe de mostrarse correctamente', () => {
-       
         expect(wrapper).toMatchSnapshot();
-        expect(wrapper.find('.text-info').text().trim()).toBe('Gastón');
+        expect(wrapper.find('.text-info').text().trim()).toBe('Gaston');
+        
+    })
 
-    });
+    test('debe de llamar el logout y usar el history', () => {
 
-    test('Debe de llamar el logout y usar history', () => {
-       
         wrapper.find('button').simulate('click');
 
-        expect(contextValue.dispatch).toBeCalledWith({
+        expect(contextValue.dispatch).toHaveBeenCalledWith({
             type: types.logout
         });
 
         expect(historyMock.replace).toHaveBeenCalledWith('/login');
-
-    });    
+        
+    })
+    
     
 
-});
+})
+

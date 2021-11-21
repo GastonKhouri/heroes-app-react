@@ -1,42 +1,43 @@
-import { authReducer } from "../../auth/authReducer";
+import { authReducer } from "../../auth/authReducer"
 import { types } from "../../types/types";
 
 
 describe('Pruebas en authReducer', () => {
-   
-    test('Debe de retornar el estado por defecto', () => {
 
+    test('debe de retornar el estado por defecto', () => {
+        
         const state = authReducer({ logged: false }, {});
+
         expect(state).toEqual({ logged: false });
 
-    });
-    
-    test('Debe de autenticar y colocar el name del usuario', () => {
+    })
 
-        const action = { 
-            type: types.login, 
+    test('debe de autenticar y colocar el name del usuario', () => {
+        
+        const action = {
+            type: types.login,
             payload: {
-                name: 'Gastón'
-            } 
+                nombre: 'Gaston'
+            }
         }
 
         const state = authReducer({ logged: false }, action);
-        expect(state).toEqual({ logged: true, name: 'Gastón' });
-        
-    });
 
-    test('Debe de borrar el name del usuario y logged en false', () => {
+        expect(state).toEqual({ nombre: 'Gaston', logged: true });
+
+    })
+
+    test('debe de borrar el name del usuario y el logged en false', () => {
         
-        const action = { 
-            type: types.logout, 
-            payload: {
-                name: 'Gastón'
-            } 
+        const action = {
+            type: types.logout
         }
 
-        const state = authReducer({ logged: false, name: 'Gastón' }, action);
+        const state = authReducer({ nombre: 'Gaston', logged: true }, action);
+
         expect(state).toEqual({ logged: false });
 
-    });
-
-});
+    })    
+    
+    
+})

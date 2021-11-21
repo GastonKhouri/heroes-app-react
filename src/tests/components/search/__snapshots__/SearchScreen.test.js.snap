@@ -1,9 +1,9 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el valor del queryString 1`] = `
+exports[`Pruebas en <SearchScreen /> debe de mostar un error si no se muestra el hero 1`] = `
 <div>
   <h1>
-    Search
+    Search Screen
   </h1>
   <hr />
   <div
@@ -13,7 +13,61 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el 
       className="col-5"
     >
       <h4>
-        Search Form
+         Search Form 
+      </h4>
+      <hr />
+      <form
+        onSubmit={[Function]}
+      >
+        <input
+          autoComplete="off"
+          className="form-control"
+          name="searchText"
+          onChange={[Function]}
+          placeholder="Find your hero"
+          type="text"
+          value="batman123"
+        />
+        <button
+          className="btn m-1 btn-block btn-outline-primary"
+          type="submit"
+        >
+          Search...
+        </button>
+      </form>
+    </div>
+    <div
+      className="col-7"
+    >
+      <h4>
+         Results 
+      </h4>
+      <hr />
+      <div
+        className="alert alert-danger"
+      >
+        There is no a hero with 
+        batman123
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Pruebas en <SearchScreen /> debe de mostrar a batman y el input con el valor del queryString 1`] = `
+<div>
+  <h1>
+    Search Screen
+  </h1>
+  <hr />
+  <div
+    className="row"
+  >
+    <div
+      className="col-5"
+    >
+      <h4>
+         Search Form 
       </h4>
       <hr />
       <form
@@ -32,7 +86,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el 
           className="btn m-1 btn-block btn-outline-primary"
           type="submit"
         >
-          Search
+          Search...
         </button>
       </form>
     </div>
@@ -40,7 +94,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el 
       className="col-7"
     >
       <h4>
-        Results
+         Results 
       </h4>
       <hr />
       <div
@@ -79,9 +133,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el 
               <p
                 className="card-text"
               >
-                 
                 Bruce Wayne
-                 
               </p>
               <p
                 className="card-text"
@@ -109,10 +161,10 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar a batman y el input con el 
 </div>
 `;
 
-exports[`Pruebas en <SearchScreen /> Debe de mostrar un error si no se encuentra el hero 1`] = `
+exports[`Pruebas en <SearchScreen /> debe de mostrarse correctamente 1`] = `
 <div>
   <h1>
-    Search
+    Search Screen
   </h1>
   <hr />
   <div
@@ -122,61 +174,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrar un error si no se encuentra
       className="col-5"
     >
       <h4>
-        Search Form
-      </h4>
-      <hr />
-      <form
-        onSubmit={[Function]}
-      >
-        <input
-          autoComplete="off"
-          className="form-control"
-          name="searchText"
-          onChange={[Function]}
-          placeholder="Find your hero"
-          type="text"
-          value="batman123123"
-        />
-        <button
-          className="btn m-1 btn-block btn-outline-primary"
-          type="submit"
-        >
-          Search
-        </button>
-      </form>
-    </div>
-    <div
-      className="col-7"
-    >
-      <h4>
-        Results
-      </h4>
-      <hr />
-      <div
-        className="alert alert-danger"
-      >
-        There is no a hero with 
-        batman123123
-      </div>
-    </div>
-  </div>
-</div>
-`;
-
-exports[`Pruebas en <SearchScreen /> Debe de mostrarse correctamente con valores por defecto 1`] = `
-<div>
-  <h1>
-    Search
-  </h1>
-  <hr />
-  <div
-    className="row"
-  >
-    <div
-      className="col-5"
-    >
-      <h4>
-        Search Form
+         Search Form 
       </h4>
       <hr />
       <form
@@ -195,7 +193,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrarse correctamente con valores
           className="btn m-1 btn-block btn-outline-primary"
           type="submit"
         >
-          Search
+          Search...
         </button>
       </form>
     </div>
@@ -203,7 +201,7 @@ exports[`Pruebas en <SearchScreen /> Debe de mostrarse correctamente con valores
       className="col-7"
     >
       <h4>
-        Results
+         Results 
       </h4>
       <hr />
       <div

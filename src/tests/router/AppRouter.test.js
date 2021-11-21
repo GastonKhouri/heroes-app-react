@@ -1,38 +1,34 @@
+import { mount } from 'enzyme';
 import React from 'react';
-import { mount } from "enzyme";
-import { AppRouter } from '../../routers/AppRouter';
 import { AuthContext } from '../../auth/AuthContext';
-
+import AppRouter from '../../routers/AppRouter';
 
 describe('Pruebas en <AppRouter />', () => {
 
     const contextValue = {
-        dispatch: jest.fn(),
-        user: {
-            logged: false
-        }
+        user: { logged: false },
+        dispatch: jest.fn()
     }
-   
-    test('Debe de mostrar el login si no está autenticado', () => {
-       
+    
+    test('debe de mostrar el login si no esta autenticado', () => {
+
         const wrapper = mount(
             <AuthContext.Provider value={ contextValue }>
                 <AppRouter />
             </AuthContext.Provider>
         );
-
-        expect(wrapper).toMatchSnapshot();
         
-    });  
-    
-    test('Debe de mostrar el componente de Marvel si está autenticado', () => {
-       
+        expect(wrapper).toMatchSnapshot();
+        expect(wrapper.find('PublicRoute').exists()).toBe(true);
+        expect(wrapper.find('PrivateRoute').exists()).toBe(false);
+        
+    })
+
+    test('debe de mostrar el componente marvel si esta autenticado', () => {
+
         const contextValue = {
-            dispatch: jest.fn(),
-            user: {
-                logged: true,
-                name: 'Gastón'
-            }
+            user: { logged: true, name: 'Gaston' },
+            dispatch: jest.fn()
         }
 
         const wrapper = mount(
@@ -42,8 +38,8 @@ describe('Pruebas en <AppRouter />', () => {
         );
 
         expect(wrapper.find('Navbar').exists()).toBe(true);
-        expect(wrapper).toMatchSnapshot();
+        
+    })
+    
 
-    });    
-
-});
+})

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Pruebas en <DashboardRoutes /> Debe de mostrarse correctamente 1`] = `
+exports[`Pruebas en <DashboardRoutes /> debe de mostrarse correctamente 1`] = `
 Array [
   <nav
     className="navbar navbar-expand-sm navbar-dark bg-dark"
@@ -54,7 +54,7 @@ Array [
         <span
           className="nav-item nav-link text-info"
         >
-          Gastón
+          Gaston
         </span>
         <button
           className="nav-item nav-link btn"
@@ -70,7 +70,7 @@ Array [
   >
     <div>
       <h1>
-        Marvel Screen
+         Marvel Screen 
       </h1>
       <hr />
       <div
@@ -112,9 +112,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Peter Parker
-                   
                 </p>
                 <p
                   className="card-text"
@@ -173,9 +171,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Steve Rogers
-                   
                 </p>
                 <p
                   className="card-text"
@@ -234,9 +230,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Tony Stark
-                   
                 </p>
                 <p
                   className="card-text"
@@ -295,9 +289,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Thor Odinson
-                   
                 </p>
                 <p
                   className="card-text"
@@ -356,9 +348,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Bruce Banner
-                   
                 </p>
                 <p
                   className="card-text"
@@ -417,9 +407,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   James Howlett
-                   
                 </p>
                 <p
                   className="card-text"
@@ -478,9 +466,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Matthew Michael Murdock
-                   
                 </p>
                 <p
                   className="card-text"
@@ -539,9 +525,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Clinton Francis Barton
-                   
                 </p>
                 <p
                   className="card-text"
@@ -600,9 +584,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Scott Summers
-                   
                 </p>
                 <p
                   className="card-text"
@@ -661,9 +643,7 @@ Array [
                 <p
                   className="card-text"
                 >
-                   
                   Norrin Radd
-                   
                 </p>
                 <p
                   className="card-text"
